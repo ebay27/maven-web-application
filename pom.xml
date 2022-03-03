@@ -15,7 +15,8 @@
 		<name>Landmark Technologies</name>
 		<url>http://landmarktechnologies.com/</url>
 	</organization>
-
+	
+<!-- Error due to duplicate properties tag
 	<properties>
 		<jdk.version>1.8</jdk.version>
 		<spring.version>5.1.2.RELEASE</spring.version>
@@ -27,7 +28,30 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-	</properties>
+		<properties>
+  <sonar.organization>mylandmarktechs</sonar.organization>
+  <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+</properties>
+</properties>
+
+-->
+
+<!-- Removed the duplicate tag causing error -->
+
+<properties>
+		<jdk.version>1.8</jdk.version>
+		<spring.version>5.1.2.RELEASE</spring.version>
+		<junit.version>4.11</junit.version>
+		<log4j.version>1.2.17</log4j.version>
+		<sonar.host.url>http:3.238.135.186:9000/</sonar.host.url>
+		<sonar.login>admin</sonar.login>
+		<sonar.password>admin</sonar.password>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<sonar.organization>mylandmarktechs</sonar.organization>
+		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
+</properties>
+
 
 	<dependencies>
 		
@@ -97,13 +121,13 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>Landmark Technologies Releases Nexus Repository</name>
-	      <url>http://3.145.8.197:8081/repository/maven-webapp-demo/</url>
+	      <url>http://44.192.81.238:8888/mylandmarktech/repository/boa-release/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>Landmark Technologies Snapshot Nexus Repository </name>
-	      <url>http://3.145.8.197:8081/repository/maven-webappsnapdemo/</url>
+	      <url>http://44.192.81.238:8888/mylandmarktech/repository/boa-snapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
@@ -151,3 +175,4 @@
 	
 	
 </project>
+
